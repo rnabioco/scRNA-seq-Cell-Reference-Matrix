@@ -23,8 +23,7 @@ checkRawCounts(as.matrix(mat_subregions))
 
 GSE113069Normalized <- NormalizeData(mat_subregions)
 
-new_ref_matrix <- average_clusters(mat = GSE113069Normalized, metadata = meta_subregions, if_log = FALSE)
-new_ref_matrix_hashed <- average_clusters(mat = mat_subregions, metadata = meta_subregions, if_log = FALSE)
+new_ref_matrix <- average_clusters(mat = GSE113069Normalized, metadata = meta_subregions$note2, if_log = FALSE)
 head(new_ref_matrix)
 tail(new_ref_matrix)
-saveRDS(new_ref_matrix, "GSE119228.rds")
+saveRDS(new_ref_matrix, "GSE113069.rds")
