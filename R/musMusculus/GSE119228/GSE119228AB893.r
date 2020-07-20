@@ -24,7 +24,7 @@ checkRawCounts(as.matrix(mat_LungDevelopment))
 
 GSE119228Normalized <- NormalizeData(mat_LungDevelopment)
 
-new_ref_matrix <- average_clusters(mat = GSE119228Normalized, metadata = meta_LungDevelopment, if_log = FALSE)
+new_ref_matrix <- average_clusters(mat = GSE119228Normalized, metadata = meta_LungDevelopment$treatment, if_log = FALSE)
 head(new_ref_matrix)
 tail(new_ref_matrix)
 saveRDS(new_ref_matrix, "GSE119228.rds")
